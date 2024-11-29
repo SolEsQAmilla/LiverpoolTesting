@@ -13,8 +13,8 @@ public class DriverManagerFactory {
             case CHROME:
                 driverManager = new ChromeDriverManager();
                 break;
-            case FIREFOX:
-                driverManager = new FirefoxDriverManager();
+            case EDGE:
+                driverManager = new EdgeDriverManager();
                 break;
             default:
                 log.info("invalid browser");

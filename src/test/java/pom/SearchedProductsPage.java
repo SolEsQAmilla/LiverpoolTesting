@@ -44,8 +44,8 @@ public class SearchedProductsPage extends BasePage{
         return this.waitForElement(element,wait);
     }
 
-    public boolean checkIfElementIsDisplayedProductsPage(WebElement element){
-        return this.isDisplayed(element);
+    public boolean checkIfElementIsClickeableSearchedPage(WebElement element, WebDriverWait wait){
+        return this.waitForElementToBeClickeable(element, wait);
     }
 
     public boolean waitForInteractibleElementInSearchProductsPage(WebElement element,WebDriverWait wait){

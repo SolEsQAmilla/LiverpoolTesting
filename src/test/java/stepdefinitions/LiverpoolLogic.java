@@ -59,8 +59,9 @@ public class LiverpoolLogic extends TestBase {
     public void iClickOn(String element) throws Throwable{
         switch(element.toLowerCase()){
             case "product":
-                searchedProductsPage.waitForInteractibleElementInSearchProductsPage(products.get(0), wait);
-                searchedProductsPage.clickOnProduct(products.get(0));
+                searchedProductsPage.waitForInteractibleElementInSearchProductsPage(products.getFirst(), wait);
+                searchedProductsPage.checkIfElementIsClickeableSearchedPage(products.getFirst(), wait);
+                searchedProductsPage.clickOnProduct(products.getFirst());
                 break;
             case "buy now":
                 productPage.waitForInteractibleElementInSearchProductPage(wait);

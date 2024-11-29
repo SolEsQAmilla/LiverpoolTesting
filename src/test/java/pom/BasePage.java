@@ -57,6 +57,16 @@ public class BasePage {
         return unfound;
     }
 
+    public boolean waitForElementToBeClickeable(WebElement element, WebDriverWait wait){
+        boolean unfound = false;
+        try{
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+        } catch (TimeoutException e) {
+            unfound = true;
+        }
+        return unfound;
+    }
+
     public void sendKeys(By element, String text){
         try{
             switch(text){
